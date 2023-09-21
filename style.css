@@ -1,0 +1,122 @@
+
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 100%;
+    padding: 20px;
+}
+
+.section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.image-item {
+    flex-basis: calc(25% - 20px);
+    margin: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image-item img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+
+
+/* CSS for image enlargement */
+.enlarged {
+    position: absolute;
+    /* Change from fixed to absolute */
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Center the element */
+
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.enlarged img {
+    cursor: pointer;
+    max-width: 100%;
+    /* Allow the image to be smaller if the viewport is narrow */
+    max-height: 100%;
+    /* Allow the image to be smaller if the viewport is short */
+}
+
+/* CSS for the modal */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CSS for the modal content */
+.modal-content {
+width: 100%; /* Set to 100% of the screen width */
+max-height: 100%; /* Set to 100% of the screen height */
+overflow: auto;
+text-align: center;
+background-color: #fff;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+}
+/* CSS for the modal image */
+.modal img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* Maintain aspect ratio while fitting within the container */
+}
+
+/* Small screens (576px and below) */
+@media (max-width: 576px) {
+    .text-sm {
+      font-size: 14px; /* Adjust the font size for small screens */
+    }
+  }
+  
+  /* Medium screens (768px and below) */
+  @media (max-width: 768px) {
+    .text-md {
+      font-size: 16px; /* Adjust the font size for medium screens */
+    }
+  }
+  
+  /* Large screens (992px and below) */
+  @media (max-width: 992px) {
+    .text-lg {
+      font-size: 18px; /* Adjust the font size for large screens */
+    }
+  }
+  
